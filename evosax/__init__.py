@@ -1,3 +1,6 @@
+"""
+.. include:: ../README.md
+"""
 from .strategy import Strategy, EvoState, EvoParams
 from .strategies import (
     SimpleGA,

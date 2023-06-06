@@ -25,8 +25,8 @@ jobs:
 
       # ADJUST THIS: install all dependencies (including pdoc)
       - run: |
-        pip install -e .
-        pip install pdoc
+          pip install -e .
+          pip install pdoc
       # builds the documentation into docs/.
       # - run: python docs/make.py
       # FIXME - change logo url

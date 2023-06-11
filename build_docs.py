@@ -22,9 +22,9 @@ def get_version():
 def gen_doc():
     pdoc.render.configure(
         docformat="google",
-        logo="https://arxaqapi.github.io/logo.png",
+        logo="https://github.com/RobertTLange/evosax/raw/main/docs/logo.png",
         template_directory=docs / "template",
-        edit_url_map={"evosax": "https://github.com/RobertTLange/evosax/blob/main/evosax/ "},
+        edit_url_map={"evosax": "https://github.com/RobertTLange/evosax/blob/main/evosax/"},
         footer_text=f"evosax v{get_version()}"
     )
 

@@ -1,16 +1,21 @@
 from pathlib import Path
+import sys
 import re
+
+sys.path.append("..")
 
 import pdoc
 import evosax
 
 
-docs = Path("docs/")
+docs = Path(".")
+
 
 def get_version():
     # Taken from https://github.com/RobertTLange/evosax/blob/af5c32271583672a42adef08f19cd535a9fa0d93/setup.py#L26-L33
-    VERSIONFILE = "evosax/_version.py"
-    verstrline = open(VERSIONFILE, "rt").read()
+    VERSIONFILE = "../evosax/_version.py"
+    with open(VERSIONFILE, "rt") as f:
+        verstrline = f.read()
     VSRE = r"^__version__ = ['\"]([^'\"]*)['\"]"
     mo = re.search(VSRE, verstrline, re.M)
     if mo:
@@ -18,6 +23,7 @@ def get_version():
     else:
         raise RuntimeError("Unable to find version string in %s." % (VERSIONFILE,))
     return verstr
+
 
 def gen_doc():
     pdoc.render.configure(
@@ -40,5 +46,3 @@ if __name__ == "__main__":
     del evosax.strategies.__all__
     
     gen_doc()
-
-# FIXME - move to docs/ folder

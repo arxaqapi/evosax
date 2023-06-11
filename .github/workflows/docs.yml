@@ -31,7 +31,7 @@ jobs:
       # - run: python docs/make.py
       # FIXME - change logo url
       - run: >
-          python build_docs.py
+          cd docs/ && python build_docs.py
       - uses: actions/upload-pages-artifact@v1
         with:
           path: docs/

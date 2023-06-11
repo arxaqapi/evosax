@@ -11,10 +11,10 @@ NetworkMapper = {
     "LSTM": LSTM,
 }
 
-# __all__ = [
-#     "MLP",
-#     "CNN",
-#     "All_CNN_C",
-#     "LSTM",
-#     "NetworkMapper",
-# ]
+__all__ = [
+    "MLP",
+    "CNN",
+    "All_CNN_C",
+    "LSTM",
+    "NetworkMapper",
+]

@@ -10,10 +10,10 @@ ProblemMapper = {
     "Sequence": SequenceFitness,
 }
 
-# __all__ = [
-#     "GymnaxFitness",
-#     "VisionFitness",
-#     "BBOBFitness",
-#     "SequenceFitness",
-#     "ProblemMapper",
-# ]
+__all__ = [
+    "GymnaxFitness",
+    "VisionFitness",
+    "BBOBFitness",
+    "SequenceFitness",
+    "ProblemMapper",
+]

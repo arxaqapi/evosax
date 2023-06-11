@@ -31,14 +31,7 @@ jobs:
       # - run: python docs/make.py
       # FIXME - change logo url
       - run: >
-          pdoc --docformat google
-          --logo "logo.png"
-          --output-dir docs/
-          --template-directory docs/template
-          --edit-url evosax=https://github.com/RobertTLange/evosax/blob/main/evosax/
-          --footer-text "evosax ${{github.ref_name}}"
-          evosax
-
+          python build_docs.py
       - uses: actions/upload-pages-artifact@v1
         with:
           path: docs/
